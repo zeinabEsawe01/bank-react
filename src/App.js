@@ -60,7 +60,7 @@ const getCatagoriesSum = async function(){
 
 const updateBalance = function(transactions){
   let newBalance = 0
-  transactions.forEach(t => { console.log(t.kind + " " + t.amount);
+  transactions.forEach(t => {
     t.kind = 'Deposit' ? newBalance += t.amount : newBalance -= t.amount
   })
   setBalance(newBalance)
